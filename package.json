@@ -6,7 +6,7 @@
     "dev": "concurrently \"contentlayer dev\" \"next dev\"",
     "build": "contentlayer build && next build",
     "turbo": "next dev --turbo",
-    "start": "next start",
+    "start": "next start -p 3000",
     "lint": "next lint",
     "preview": "next build && next start",
     "postinstall": "prisma generate"
