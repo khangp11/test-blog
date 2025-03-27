@@ -12,6 +12,15 @@ const nextConfig = {
     appDir: true,
     serverComponentsExternalPackages: ["@prisma/client"],
   },
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.wasm$/,
+      type: "javascript/auto",
+      loader: "wasm-loader",
+    });
+
+    return config;
+  },
 }
 
 export default withContentlayer(nextConfig)
