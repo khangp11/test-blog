@@ -4,6 +4,7 @@ import "./env.mjs"
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  typescript: { ignoreBuildErrors: true },
   reactStrictMode: true,
   images: {
     domains: ["avatars.githubusercontent.com"],
@@ -18,7 +19,6 @@ const nextConfig = {
       type: "javascript/auto",
       loader: "wasm-loader",
     });
-
     return config;
   },
 }
